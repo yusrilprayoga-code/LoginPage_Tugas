@@ -50,38 +50,39 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: <Widget>[
-        Container(
-            child: Center(
-          child: Card(
-            elevation: 0,
-            color: Colors.grey,
-            child: SizedBox(
-              width: 350,
-              height: 300,
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'TUGAS KELOMPOK',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                    ),
-                    SizedBox(height: 20), // Spasi antara teks dan daftar data
-                    // Daftar data kelompok nama dan NIM
-                    buildGroupData('MOH YUSRIL PRAYOGA', '124210006'),
-                    buildGroupData('JEREMY KENNET HARNANTO', '124210007'),
-                    buildGroupData('DAFFA ADITYA PRANUGRAHA', '124210021'),
-                    // Tambahkan entri baru sesuai kebutuhan
-                  ],
-                ),
-              ),
+        DataTable(
+          columns: <DataColumn>[
+            DataColumn(label: Text("No")),
+            DataColumn(label: Text("Nama")),
+            DataColumn(label: Text("Nim")),
+          ],
+          rows: <DataRow>[
+            DataRow(
+              cells: <DataCell>[
+                DataCell(Text("1")),
+                DataCell(Text("Moh Yusril Prayoga")),
+                DataCell(Text("124210006")),
+              ],
             ),
-          ),
-        )),
+            DataRow(
+              cells: <DataCell>[
+                DataCell(Text("2")),
+                DataCell(Text("Jeremy Kenneth Harnanto")),
+                DataCell(Text("124210007")),
+              ],
+            ),
+            DataRow(
+              cells: <DataCell>[
+                DataCell(Text("3")),
+                DataCell(Text("Daffa Aditya Pranugraha")),
+                DataCell(Text("124210021")),
+              ],
+            ),
+          ],
+        ),
         Container(
           child: Center(
-            child: MyCalculate(),
+            child: MyApp(),
           ),
         ),
         //logout button
