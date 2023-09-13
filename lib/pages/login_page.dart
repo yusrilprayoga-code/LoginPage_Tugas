@@ -30,7 +30,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   ),
                   Icon(
                     Icons.auto_awesome_mosaic,
-                    color: Colors.pink,
+                    color: Colors.black,
                     size: 100,
                   ),
                   SizedBox(
@@ -42,7 +42,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     "Welcome Back",
                     style: TextStyle(
                       fontSize: 30,
-                      color: Colors.pink,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -145,7 +145,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                                 rememberMe = newValue!;
                               });
                             },
-                            activeColor: Colors.pink,
+                            activeColor: Colors.black,
                           ),
                           Text(
                             'Remember me',
@@ -178,12 +178,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                                 content: Text("Login Berhasil"),
                               ),
                             );
-                            Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomePage(),
-                                ),
-                                (route) => false);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
                           } else {
                             emailController.clear();
                             passwordController.clear();
@@ -203,7 +203,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             letterSpacing: 1),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.pink,
+                        primary: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
